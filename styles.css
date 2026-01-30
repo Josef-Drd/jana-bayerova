@@ -304,12 +304,12 @@ ol {
     right: 0;
     z-index: var(--z-fixed);
     padding-block: var(--space-md);
-    background-color: transparent;
-    transition: background-color var(--transition-base), padding var(--transition-base);
+    background: linear-gradient(in oklab to bottom, rgb(15 20 25 / 0.8), transparent);
+    transition: background var(--transition-base), padding var(--transition-base);
 }
 
 .header.is-scrolled {
-    background-color: rgb(15 20 25 / 0.95);
+    background: rgb(15 20 25 / 0.95);
     backdrop-filter: blur(10px);
     padding-block: var(--space-sm);
 }
@@ -476,6 +476,7 @@ ol {
 }
 
 /* === HERO SECTION === */
+
 .hero {
     position: relative;
     min-height: 100vh;
@@ -486,16 +487,58 @@ ol {
     overflow: hidden;
 }
 
+/* Spodní gradient do další sekce */
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(in oklab to bottom, transparent, var(--color-surface));
+    z-index: 2;
+    pointer-events: none;
+}
+
 .hero__carousel {
     position: absolute;
     inset: 0;
     z-index: 0;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero__slides {
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: 65vw;
+    aspect-ratio: 4 / 3;
+    max-height: 75vh;
+}
+
+/* Zlatý rámeček kolem kontejneru */
+.hero__slides::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border: 1px solid rgb(var(--color-primary-rgb) / 0.3);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Gradienty ze všech stran - fade do pozadí */
+.hero__slides::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    box-shadow:
+        inset 60px 0 40px -20px var(--color-background),
+        inset -60px 0 40px -20px var(--color-background),
+        inset 0 60px 40px -20px var(--color-background),
+        inset 0 -60px 40px -20px var(--color-background);
 }
 
 .hero__slide {
@@ -509,16 +552,19 @@ ol {
     opacity: 1;
 }
 
+/* Tmavý overlay pro čitelnost textu */
 .hero__slide::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(
-        to bottom,
-        rgb(15 20 25 / 0.4) 0%,
-        rgb(15 20 25 / 0.6) 50%,
-        rgb(15 20 25 / 0.9) 100%
+        in oklab to bottom,
+        rgb(15 20 25 / 0.2) 0%,
+        rgb(15 20 25 / 0.3) 50%,
+        rgb(15 20 25 / 0.7) 100%
     );
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero__slide-image {
@@ -528,6 +574,20 @@ ol {
     object-position: center;
 }
 
+@media (max-width: 63.9375rem) {
+    .hero__slides {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 47.9375rem) {
+    .hero__slides {
+        width: 92vw;
+        aspect-ratio: 3 / 4;
+        max-height: 65vh;
+    }
+}
+
 .hero__carousel-nav {
     position: absolute;
     bottom: 120px;
@@ -535,7 +595,7 @@ ol {
     transform: translateX(-50%);
     display: flex;
     gap: var(--space-sm);
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero__carousel-dot {
@@ -556,7 +616,7 @@ ol {
 
 .hero__content {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     text-align: center;
     padding: var(--space-xl);
 }
@@ -598,11 +658,7 @@ ol {
     display: block;
     width: 1px;
     height: 60px;
-    background: linear-gradient(
-        to bottom,
-        var(--color-primary) 0%,
-        transparent 100%
-    );
+    background: linear-gradient(in oklab to bottom, var(--color-primary), transparent);
     animation: scrollLine 2s ease-in-out infinite;
 }
 
@@ -689,35 +745,6 @@ ol {
 }
 
 /* === WORK/TVORBA SECTION === */
-.work__categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--space-sm);
-    margin-bottom: var(--space-3xl);
-}
-
-.work__category {
-    padding: var(--space-sm) var(--space-lg);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    color: var(--color-text-muted);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-full);
-    transition: all var(--transition-fast);
-}
-
-.work__category:hover,
-.work__category:focus-visible {
-    color: var(--color-text);
-    border-color: var(--color-border-light);
-}
-
-.work__category.is-active {
-    color: var(--color-text-inverse);
-    background-color: var(--color-primary);
-    border-color: var(--color-primary);
-}
 
 .work__process {
     background-color: var(--color-surface);
@@ -782,6 +809,36 @@ ol {
 /* === GALLERY SECTION === */
 .gallery {
     background-color: var(--color-surface);
+}
+
+.gallery__categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-3xl);
+}
+
+.gallery__category {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.gallery__category:hover,
+.gallery__category:focus-visible {
+    color: var(--color-text);
+    border-color: var(--color-border-light);
+}
+
+.gallery__category.is-active {
+    color: var(--color-text-inverse);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .gallery__grid {
@@ -1237,7 +1294,7 @@ ol {
     .skip-link,
     .hero__carousel-nav,
     .hero__scroll,
-    .work__categories,
+    .gallery__categories,
     .lightbox,
     form,
     button {
