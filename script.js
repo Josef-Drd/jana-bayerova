@@ -479,6 +479,12 @@
             if (this.statusElement) {
                 this.statusElement.textContent = getTranslation('form_success');
             }
+            if (typeof gtag === 'function') {
+                gtag('event', 'generate_lead', {
+                    event_category: 'engagement',
+                    event_label: 'contact_form'
+                });
+            }
         },
 
         handleError() {
