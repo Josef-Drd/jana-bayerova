@@ -67,7 +67,7 @@
             nav_contact: 'Kontakt',
             hero_tagline: 'Malba světla a paměti míst',
             hero_cta_gallery: 'Prohlédnout tvorbu',
-            hero_cta_commission: 'Zakázková malba',
+            hero_cta_commission: 'Chci obraz',
             about_title: 'O mně',
             about_p1: 'Jmenuji se Jana Bayerová a narodila jsem se v krásném moravském městečku Boskovicích roku 1971. Po studiích na Střední škole uměleckoprůmyslové v Brně a Konzervátorsko-restaurátorském studiu při Moravském zemském muzeu v Brně stále žiji i pracuji v Boskovicích.',
             about_p2: 'K malování mě přivedl můj dědeček, který maloval amatérsky jen tak pro sebe a rodinu. V jeho dílně vždy voněly olejové barvy a terpentýnové silice, což mě už jako malou holku fascinovalo a lákalo.',

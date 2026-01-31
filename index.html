@@ -91,6 +91,25 @@
     </script>
 </head>
 <body>
+    <!-- Artistic Frame - Gallery atmosphere -->
+    <div class="artistic-frame" aria-hidden="true">
+        <div class="artistic-frame__inner"></div>
+        <div class="artistic-frame__corner artistic-frame__corner--tl"></div>
+        <div class="artistic-frame__corner artistic-frame__corner--tr"></div>
+        <div class="artistic-frame__corner artistic-frame__corner--bl"></div>
+        <div class="artistic-frame__corner artistic-frame__corner--br"></div>
+        <div class="artistic-frame__perspective">
+            <div class="artistic-frame__line artistic-frame__line--tl-1"></div>
+            <div class="artistic-frame__line artistic-frame__line--tl-2"></div>
+            <div class="artistic-frame__line artistic-frame__line--tr-1"></div>
+            <div class="artistic-frame__line artistic-frame__line--tr-2"></div>
+            <div class="artistic-frame__line artistic-frame__line--bl-1"></div>
+            <div class="artistic-frame__line artistic-frame__line--bl-2"></div>
+            <div class="artistic-frame__line artistic-frame__line--br-1"></div>
+            <div class="artistic-frame__line artistic-frame__line--br-2"></div>
+        </div>
+    </div>
+    
     <a href="#main" class="skip-link" data-i18n="skip_link">Přeskočit na obsah</a>
     
     <!-- Header -->
@@ -133,100 +152,51 @@
         
         <!-- Hero Section -->
         <section class="hero" aria-labelledby="hero-title">
-            <div class="hero__carousel" data-carousel aria-label="Ukázky děl">
-                <div class="hero__slides" data-carousel-slides>
-                    <div class="hero__slide is-active" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/003_Toskanskou Krajinou Ii.webp" 
-                            alt="Toskánská krajina s cypřiši a vinicemi" 
-                            class="hero__slide-image"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/005_Stare Brno Pod Svrateckym Nahonem.webp" 
-                            alt="Staré Brno pod Svrateckým náhonem" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/007_Boskovice Pilske Udoli.webp" 
-                            alt="Boskovice - Pilské údolí" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/009_Benatska Romance.webp" 
-                            alt="Benátská romance - gondoly na kanálu" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/014_Norimberg.webp" 
-                            alt="Norimberg - historické centrum města" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/016_Bamberg.webp" 
-                            alt="Bamberg - malebné uličky" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/019_Boskovice U Templu.webp" 
-                            alt="Boskovice U Templu - večerní atmosféra" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/041_Kostel Sv Jakuba Starsiho V Boskovicich.webp" 
-                            alt="Kostel sv. Jakuba Staršího v Boskovicích" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
-                    </div>
-                    <div class="hero__slide" data-carousel-slide>
-                        <img 
-                            src="./photos/art-photos/065_Babiccina Jablon.webp" 
-                            alt="Babiččina jabloň v květu" 
-                            class="hero__slide-image"
-                            loading="lazy"
-                        >
+            <div class="hero__main">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">Jana<br>Bayerová</h1>
+                    <p class="hero__tagline" data-i18n="hero_tagline">Malba světla a paměti míst</p>
+                    <p class="hero__description">
+                        Autorská olejomalba s důrazem na atmosféru, světlo a poetiku míst. 
+                        Každý obraz je originál vytvořený na ručně připraveném plátně.
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#galerie" class="button button--primary" data-i18n="hero_cta_gallery">Prohlédnout tvorbu</a>
+                        <a href="#zakazka" class="button button--secondary" data-i18n="hero_cta_commission">Chci obraz</a>
                     </div>
                 </div>
                 
-                <div class="hero__carousel-nav" aria-label="Navigace carouselu">
-                    <button class="hero__carousel-dot is-active" data-carousel-dot="0" aria-label="Slide 1"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="1" aria-label="Slide 2"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="2" aria-label="Slide 3"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="3" aria-label="Slide 4"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="4" aria-label="Slide 5"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="5" aria-label="Slide 6"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="6" aria-label="Slide 7"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="7" aria-label="Slide 8"></button>
-                    <button class="hero__carousel-dot" data-carousel-dot="8" aria-label="Slide 9"></button>
+                <div class="hero__image-wrapper">
+                    <img 
+                        src="./photos/jana-bayerova-photos/Messenger_creation_89222933-219C-4950-9C73-14FF967FE926.jpeg" 
+                        alt="Jana Bayerová při malování v ateliéru" 
+                        class="hero__image"
+                    >
+                    <div class="hero__image-frame" aria-hidden="true"></div>
                 </div>
             </div>
             
-            <div class="hero__content">
-                <h1 id="hero-title" class="hero__title">Jana Bayerová</h1>
-                <p class="hero__tagline" data-i18n="hero_tagline">Malba světla a paměti míst</p>
-                <div class="hero__cta">
-                    <a href="#galerie" class="button button--primary" data-i18n="hero_cta_gallery">Prohlédnout tvorbu</a>
-                    <a href="#zakazka" class="button button--secondary" data-i18n="hero_cta_commission">Zakázková malba</a>
+            <div class="hero__mosaic" aria-label="Ukázky děl">
+                <div class="hero__mosaic-item hero__mosaic-item--1">
+                    <img src="./photos/art-photos/083_Vychod Slunce V Pilskem Udoli.webp" alt="Východ slunce v Pilském údolí" loading="lazy">
+                </div>
+                <div class="hero__mosaic-item hero__mosaic-item--2">
+                    <img src="./photos/art-photos/078_Svitani V Amsterodamu.webp" alt="Svítání v Amsterodamu" loading="lazy">
+                </div>
+                <div class="hero__mosaic-item hero__mosaic-item--3">
+                    <img src="./photos/art-photos/092_Levandulova Zahrada.webp" alt="Levandulová zahrada" loading="lazy">
+                </div>
+                <div class="hero__mosaic-item hero__mosaic-item--4">
+                    <img src="./photos/art-photos/105_Toskanska Veduta.webp" alt="Toskánská veduta" loading="lazy">
+                </div>
+                <div class="hero__mosaic-item hero__mosaic-item--5">
+                    <img src="./photos/art-photos/109_Boskovice U Templu.webp" alt="Boskovice U Templu" loading="lazy">
+                </div>
+                <div class="hero__mosaic-item hero__mosaic-item--6">
+                    <img src="./photos/art-photos/084_Bilkovou Ulici.webp" alt="Bílkovou ulicí" loading="lazy">
+                </div>
+                <div class="hero__mosaic-item hero__mosaic-item--7">
+                    <img src="./photos/art-photos/107_Levandule V Aix.webp" alt="Levandule v Aix" loading="lazy">
                 </div>
             </div>
             
@@ -273,7 +243,7 @@
         </section>
         
         <!-- Work/Tvorba Section -->
-        <section id="tvorba" class="section work" aria-labelledby="work-title">
+        <section id="tvorba" class="section section--decorated work" aria-labelledby="work-title">
             <div class="container">
                 <h2 id="work-title" class="section__title section__title--center" data-i18n="work_title" data-reveal>Tvorba</h2>
                 <p class="section__subtitle" data-i18n="work_subtitle" data-reveal>Obrazy vznikají na ručně připravených plátnech olejovými barvami</p>
@@ -307,7 +277,7 @@
         </section>
         
         <!-- Gallery Section -->
-        <section id="galerie" class="section gallery" aria-labelledby="gallery-title">
+        <section id="galerie" class="section section--decorated gallery" aria-labelledby="gallery-title">
             <div class="container">
                 <h2 id="gallery-title" class="section__title section__title--center" data-i18n="gallery_title" data-reveal>Galerie</h2>
                 
@@ -340,7 +310,7 @@
                     <article class="gallery__item" data-category="city" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/109_Boskovice U Templu.webp" 
+                                src="./photos/art-photos/019_Boskovice U Templu.webp" 
                                 alt="Boskovice U Templu - večerní ulice" 
                                 class="gallery__image"
                                 loading="lazy"
@@ -367,17 +337,17 @@
                         </button>
                     </article>
                     
-                    <article class="gallery__item" data-category="city" data-reveal>
+                    <article class="gallery__item gallery__item--tall" data-category="city" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/104_Praha Zamecke Schody.webp" 
-                                alt="Praha Zámecké schody" 
+                                src="./photos/art-photos/017_Boskovice Zimni Vecer U Synagogy.webp" 
+                                alt="Boskovice - zimní večer u synagogy" 
                                 class="gallery__image"
                                 loading="lazy"
                                 decoding="async"
                             >
                             <div class="gallery__overlay">
-                                <h3 class="gallery__item-title">Praha - Zámecké schody</h3>
+                                <h3 class="gallery__item-title">Zimní večer u synagogy</h3>
                             </div>
                         </button>
                     </article>
@@ -385,17 +355,30 @@
                     <article class="gallery__item" data-category="city" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/108_Brno Vodni Ulice.webp" 
-                                alt="Brno Vodní ulice" 
+                                src="./photos/art-photos/136_Stare Brno Vodni Ulice.webp" 
+                                alt="Staré Brno - Vodní ulice" 
                                 class="gallery__image"
                                 loading="lazy"
                                 decoding="async"
                             >
                             <div class="gallery__overlay">
-                                <h3 class="gallery__item-title">Brno - Vodní ulice</h3>
+                                <h3 class="gallery__item-title">Staré Brno - Vodní ulice</h3>
                             </div>
                         </button>
                     </article>
+                    
+                    <!-- Empty canvas placeholder -->
+                    <div class="gallery__canvas" data-reveal aria-hidden="true">
+                        <div class="gallery__canvas-frame">
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tr"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--bl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--br"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--1"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--2"></div>
+                            <div class="gallery__canvas-cross"></div>
+                        </div>
+                    </div>
                     
                     <article class="gallery__item" data-category="city" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
@@ -408,6 +391,81 @@
                             >
                             <div class="gallery__overlay">
                                 <h3 class="gallery__item-title">Boskovice - Dvořáčkův mlýn</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="city" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/010_Benatcan.webp" 
+                                alt="Benátčan" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Benátčan</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="city" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/038_Nokturno U Zelezne Panny.webp" 
+                                alt="Nokturno u Železné panny" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Nokturno u Železné panny</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="city" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/054_Benatky I.webp" 
+                                alt="Benátky I" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Benátky I</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="city" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/134_Olomouc Nocturno Ve Skolni Ulicce.webp" 
+                                alt="Olomouc - nokturno ve Školní uličce" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Olomouc - Školní ulička</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="city" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/016_Bamberg.webp" 
+                                alt="Bamberg" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Bamberg</h3>
                             </div>
                         </button>
                     </article>
@@ -458,6 +516,21 @@
                         </button>
                     </article>
                     
+                    <!-- Empty canvas placeholder - tall -->
+                    <div class="gallery__canvas gallery__canvas--tall" data-reveal aria-hidden="true">
+                        <div class="gallery__canvas-frame">
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tr"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--bl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--br"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--1"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--2"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--3"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--4"></div>
+                            <div class="gallery__canvas-cross"></div>
+                        </div>
+                    </div>
+                    
                     <article class="gallery__item" data-category="garden" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
@@ -476,30 +549,118 @@
                     <article class="gallery__item" data-category="garden" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/115_Kytice Ruzi A Hortenzii.webp" 
-                                alt="Kytice růží a hortenzií" 
+                                src="./photos/art-photos/124_Modre Kosatce.webp" 
+                                alt="Modré kosatce" 
                                 class="gallery__image"
                                 loading="lazy"
                                 decoding="async"
                             >
                             <div class="gallery__overlay">
-                                <h3 class="gallery__item-title">Kytice růží a hortenzií</h3>
+                                <h3 class="gallery__item-title">Modré kosatce</h3>
                             </div>
                         </button>
                     </article>
                     
-                    <!-- Landscapes -->
-                    <article class="gallery__item gallery__item--tall" data-category="landscape" data-reveal>
+                    <article class="gallery__item" data-category="garden" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/105_Toskanska Veduta.webp" 
-                                alt="Toskánská veduta" 
+                                src="./photos/art-photos/123_Temne Hortenzie.webp" 
+                                alt="Temné hortenzie" 
                                 class="gallery__image"
                                 loading="lazy"
                                 decoding="async"
                             >
                             <div class="gallery__overlay">
-                                <h3 class="gallery__item-title">Toskánská veduta</h3>
+                                <h3 class="gallery__item-title">Temné hortenzie</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="garden" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/030_Zahradni Ruze.webp" 
+                                alt="Zahradní růže" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Zahradní růže</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="garden" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/095_Levandulovou Cestickou.webp" 
+                                alt="Levandulovou cestičkou" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Levandulovou cestičkou</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="garden" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/061_Kytice S Hortenziemi A Pivonkami.webp" 
+                                alt="Kytice s hortenziemi a pivoňkami" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Hortenzie a pivoňky</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="garden" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/120_Amarylis.webp" 
+                                alt="Amarylis" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Amarylis</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <!-- Empty canvas placeholder -->
+                    <div class="gallery__canvas" data-reveal aria-hidden="true">
+                        <div class="gallery__canvas-frame">
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tr"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--bl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--br"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--3"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--4"></div>
+                            <div class="gallery__canvas-cross"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Landscapes -->
+                    <article class="gallery__item gallery__item--wide" data-category="landscape" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/037_Toskanskou Krajinou Iii.webp" 
+                                alt="Toskánskou krajinou" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Toskánskou krajinou</h3>
                             </div>
                         </button>
                     </article>
@@ -507,7 +668,7 @@
                     <article class="gallery__item" data-category="landscape" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/107_Levandule V Aix.webp" 
+                                src="./photos/art-photos/040_Levandule V Aix Ii.webp" 
                                 alt="Levandule v Aix" 
                                 class="gallery__image"
                                 loading="lazy"
@@ -534,18 +695,78 @@
                         </button>
                     </article>
                     
-                    <!-- Animals -->
-                    <article class="gallery__item gallery__item--tall" data-category="animal" data-reveal>
+                    <article class="gallery__item" data-category="landscape" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/114_Na Lovu I Cerny Panter.webp" 
-                                alt="Na lovu I - Černý panter" 
+                                src="./photos/art-photos/029_Vodopady Bile Opavy.webp" 
+                                alt="Vodopády Bílé Opavy" 
                                 class="gallery__image"
                                 loading="lazy"
                                 decoding="async"
                             >
                             <div class="gallery__overlay">
-                                <h3 class="gallery__item-title">Na lovu I - Černý panter</h3>
+                                <h3 class="gallery__item-title">Vodopády Bílé Opavy</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="landscape" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/064_Louka S Vlcimi Maky.webp" 
+                                alt="Louka s vlčími máky" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Louka s vlčími máky</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="landscape" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/053_More V Brightonu.webp" 
+                                alt="Moře v Brightonu" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Moře v Brightonu</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="landscape" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/066_Pohled Na Letovice Ii.webp" 
+                                alt="Pohled na Letovice" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Pohled na Letovice</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <!-- Animals -->
+                    <article class="gallery__item gallery__item--tall" data-category="animal" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/033_Na Lovu Xiii.webp" 
+                                alt="Na lovu XIII" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Na lovu - Leopard</h3>
                             </div>
                         </button>
                     </article>
@@ -553,14 +774,14 @@
                     <article class="gallery__item" data-category="animal" data-reveal>
                         <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
                             <img 
-                                src="./photos/art-photos/113_Na Lovu Ii.webp" 
-                                alt="Na lovu II" 
+                                src="./photos/art-photos/045_Na Lovu Xii.webp" 
+                                alt="Na lovu XII" 
                                 class="gallery__image"
                                 loading="lazy"
                                 decoding="async"
                             >
                             <div class="gallery__overlay">
-                                <h3 class="gallery__item-title">Na lovu II</h3>
+                                <h3 class="gallery__item-title">Na lovu XII</h3>
                             </div>
                         </button>
                     </article>
@@ -576,6 +797,49 @@
                             >
                             <div class="gallery__overlay">
                                 <h3 class="gallery__item-title">Chat Noir</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <!-- Empty canvas placeholder -->
+                    <div class="gallery__canvas" data-reveal aria-hidden="true">
+                        <div class="gallery__canvas-frame">
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tr"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--bl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--br"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--1"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--4"></div>
+                            <div class="gallery__canvas-cross"></div>
+                        </div>
+                    </div>
+                    
+                    <article class="gallery__item" data-category="animal" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/055_Na Lovu Xi.webp" 
+                                alt="Na lovu XI" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Na lovu XI</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="animal" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/056_Na Lovu X.webp" 
+                                alt="Na lovu X" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Na lovu X</h3>
                             </div>
                         </button>
                     </article>
@@ -609,6 +873,117 @@
                                 <h3 class="gallery__item-title">Judith II (dle Klimta)</h3>
                             </div>
                         </button>
+                    </article>
+                    
+                    <article class="gallery__item" data-category="master" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/082_Tri Divky V Bilem Kopie Obrazu Jaroslava Krale Z Roku 1940.webp" 
+                                alt="Tři dívky v bílém - kopie obrazu Jaroslava Krále" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Tři dívky v bílém (dle Krále)</h3>
+                            </div>
+                        </button>
+                    </article>
+                    
+                    <!-- Empty canvas placeholder -->
+                    <div class="gallery__canvas" data-reveal aria-hidden="true">
+                        <div class="gallery__canvas-frame">
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--tr"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--bl"></div>
+                            <div class="gallery__canvas-corner gallery__canvas-corner--br"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--2"></div>
+                            <div class="gallery__canvas-line gallery__canvas-line--3"></div>
+                            <div class="gallery__canvas-cross"></div>
+                        </div>
+                    </div>
+                    
+                    <article class="gallery__item" data-category="master" data-reveal>
+                        <button class="gallery__trigger" data-lightbox-trigger aria-label="Otevřít detail obrazu">
+                            <img 
+                                src="./photos/art-photos/063_Rokokova Variace.webp" 
+                                alt="Rokoková variace" 
+                                class="gallery__image"
+                                loading="lazy"
+                                decoding="async"
+                            >
+                            <div class="gallery__overlay">
+                                <h3 class="gallery__item-title">Rokoková variace</h3>
+                            </div>
+                        </button>
+                    </article>
+                </div>
+                
+                <!-- Pricing Tiles -->
+                <div class="pricing-tiles" data-reveal>
+                    <article class="pricing-tile pricing-tile--small">
+                        <div class="pricing-tile__frame">
+                            <div class="pricing-tile__corner pricing-tile__corner--tl"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--tr"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--bl"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--br"></div>
+                            <div class="pricing-tile__line pricing-tile__line--1"></div>
+                            <div class="pricing-tile__line pricing-tile__line--2"></div>
+                        </div>
+                        <div class="pricing-tile__content">
+                            <span class="pricing-tile__label">Malý obraz</span>
+                            <h3 class="pricing-tile__size">do 40 × 50 cm</h3>
+                            <div class="pricing-tile__price">
+                                <span class="pricing-tile__from">od</span>
+                                <span class="pricing-tile__amount">8 000</span>
+                                <span class="pricing-tile__currency">Kč</span>
+                            </div>
+                            <p class="pricing-tile__note">Intimní formát pro komorní prostory</p>
+                        </div>
+                    </article>
+                    
+                    <article class="pricing-tile pricing-tile--medium">
+                        <div class="pricing-tile__frame">
+                            <div class="pricing-tile__corner pricing-tile__corner--tl"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--tr"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--bl"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--br"></div>
+                            <div class="pricing-tile__line pricing-tile__line--1"></div>
+                            <div class="pricing-tile__line pricing-tile__line--2"></div>
+                            <div class="pricing-tile__line pricing-tile__line--3"></div>
+                        </div>
+                        <div class="pricing-tile__content">
+                            <span class="pricing-tile__label">Střední & velký obraz</span>
+                            <h3 class="pricing-tile__size">50 × 70 cm a více</h3>
+                            <div class="pricing-tile__price">
+                                <span class="pricing-tile__from">od</span>
+                                <span class="pricing-tile__amount">15 000</span>
+                                <span class="pricing-tile__currency">Kč</span>
+                            </div>
+                            <p class="pricing-tile__note">Dominantní dílo pro váš interiér</p>
+                        </div>
+                    </article>
+                    
+                    <article class="pricing-tile pricing-tile--cta">
+                        <div class="pricing-tile__frame pricing-tile__frame--animated">
+                            <div class="pricing-tile__corner pricing-tile__corner--tl"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--tr"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--bl"></div>
+                            <div class="pricing-tile__corner pricing-tile__corner--br"></div>
+                            <div class="pricing-tile__brush pricing-tile__brush--1"></div>
+                            <div class="pricing-tile__brush pricing-tile__brush--2"></div>
+                        </div>
+                        <div class="pricing-tile__content">
+                            <span class="pricing-tile__label">Váš příběh na plátně</span>
+                            <h3 class="pricing-tile__title">Objednejte si<br>originál</h3>
+                            <p class="pricing-tile__note">Nezávazná konzultace zdarma</p>
+                            <a href="#zakazka" class="pricing-tile__button">
+                                <span>Napsat poptávku</span>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
                     </article>
                 </div>
             </div>
