@@ -16,6 +16,7 @@
             carouselDot: '[data-carousel-dot]',
             gallery: '[data-gallery]',
             galleryItem: '.gallery__item',
+            galleryExpand: '[data-gallery-expand]',
             lightboxTrigger: '[data-lightbox-trigger]',
             lightbox: '[data-lightbox]',
             lightboxImage: '[data-lightbox-image]',
@@ -90,6 +91,8 @@
             process_step4_title: 'Finalizace',
             process_step4_text: 'Detaily, případné zlaté plátky a ochranný lak pro dlouhou životnost.',
             gallery_title: 'Galerie',
+            gallery_show_more: 'Zobrazit více obrazů',
+            gallery_show_less: 'Zobrazit méně',
             commission_title: 'Zakázková malba',
             commission_intro: 'Nechte si namalovat obraz místa, které má pro vás osobní význam. Ať už je to vaše oblíbené zákoutí města, zahrada vašeho dětství, nebo krajina z dovolené – společně vytvoříme originální dílo, které zachytí atmosféru a emoce spojené s tímto místem.',
             commission_feature1_title: 'Osobní přístup',
@@ -149,6 +152,8 @@
             process_step4_title: 'Finalization',
             process_step4_text: 'Details, optional gold leaf and protective varnish for long life.',
             gallery_title: 'Gallery',
+            gallery_show_more: 'Show more paintings',
+            gallery_show_less: 'Show less',
             commission_title: 'Commission a painting',
             commission_intro: 'Have a painting made of a place that has personal meaning for you. Whether it\'s your favorite corner of the city, the garden of your childhood, or a landscape from your vacation – together we will create an original work that captures the atmosphere and emotions associated with this place.',
             commission_feature1_title: 'Personal approach',
@@ -369,6 +374,56 @@
                 const shouldShow = category === 'all' || itemCategory === category;
                 item.classList.toggle(CONFIG.classes.hidden, !shouldShow);
             });
+            
+            GalleryExpandController.updateButtonVisibility();
+        }
+    };
+
+    /* ============================================
+       GALLERY EXPAND CONTROLLER
+       ============================================ */
+    const GalleryExpandController = {
+        gallery: null,
+        expandButton: null,
+        isExpanded: false,
+
+        init() {
+            this.gallery = document.querySelector(CONFIG.selectors.gallery);
+            this.expandButton = document.querySelector(CONFIG.selectors.galleryExpand);
+
+            if (!this.gallery || !this.expandButton) return;
+
+            this.expandButton.addEventListener('click', () => this.toggle());
+            window.addEventListener('resize', () => this.updateButtonVisibility());
+            this.updateButtonVisibility();
+        },
+
+        toggle() {
+            this.isExpanded = !this.isExpanded;
+            this.gallery.classList.toggle('is-expanded', this.isExpanded);
+            this.expandButton.setAttribute('aria-expanded', this.isExpanded);
+            
+            if (!this.isExpanded) {
+                const gallerySection = document.getElementById('galerie');
+                if (gallerySection) {
+                    const header = document.querySelector(CONFIG.selectors.header);
+                    const headerHeight = header ? header.offsetHeight : 0;
+                    const targetPosition = gallerySection.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            }
+        },
+
+        updateButtonVisibility() {
+            if (!this.expandButton || !this.gallery) return;
+            
+            const items = this.gallery.querySelectorAll(CONFIG.selectors.galleryItem);
+            const visibleItems = Array.from(items).filter(item => !item.classList.contains(CONFIG.classes.hidden));
+            
+            const isMobile = window.matchMedia('(max-width: 47.9375rem)').matches;
+            const shouldShowButton = isMobile && visibleItems.length > 6;
+            
+            this.expandButton.style.display = shouldShowButton ? 'flex' : 'none';
         }
     };
 
@@ -709,6 +764,7 @@
         SmoothScrollController.init();
         CarouselController.init();
         GalleryFilterController.init();
+        GalleryExpandController.init();
         LightboxController.init();
         RevealController.init();
         FormController.init();
